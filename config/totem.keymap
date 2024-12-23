@@ -28,13 +28,13 @@
  */
 
 // LEFT HAND MEH / TAB
-#define TAB_MEH MEH TAB
+#define TAB_MEH LS(LC(LA)) TAB
 
 // RIGHT HAND SHIFT / ENTER
-#define ENT_SFT RSFT ENT
+#define ENT_SFT RSHIFT ENTER
 
 // Layer keys
-#define RAISE_DEL RAISE DEL // DEL on tap
+#define RAI_DEL RAISE DEL // RAISE, DEL on tap
 
 // Various French characters
 #define M_DOT LS(COMMA)
@@ -47,14 +47,6 @@
 };
 
 / {
-    combos {
-        compatible = "zmk,combos";
-        combo_esc {
-            timeout-ms = <50>;
-            key-positions = <0 1>;
-            bindings = <&kp ESC>;
-        };
-    };
 
     macros {
         gif: gif {
@@ -97,7 +89,7 @@
                 &kp FR_A    &kp FR_Z    &kp E       &kp R       &kp T          &kp Y       &kp U       &kp I       &kp O       &kp P
                 &kp FR_Q    &kp S       &kp D       &kp F       &kp G          &kp H       &kp J       &kp K       &kp L       &kp M
     &mt TAB_MEH &kp FR_W    &kp X       &kp C       &kp V       &kp B          &kp N       &kp FR_COMM &kp M_DOT   &kp DOT     &kp FR_SCLN  &mt ENT_SFT
-                                        &kp ESC     &kp SPACE   &mo LOWER      &mt RAI_DEL &kp BSPC    &mo NAV
+                                        &kp ESC     &kp SPACE   &mo LOWER      &lt RAI_DEL &kp BSPC    &mo NAV
             >;
         };
 

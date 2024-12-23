@@ -17,12 +17,26 @@
 #include <dt-bindings/zmk/outputs.h>
 #include "keymap_french.h"
 
-#define BASE   0
+#define AZERTY 0
 #define LOWER  1
 #define RAISE  2
 #define NAV    3
 #define ACTION 4
 
+/*
+ * Define macros
+ */
+
+// LEFT HAND MEH / TAB
+#define TAB_MEH MEH TAB
+
+// RIGHT HAND SHIFT / ENTER
+#define ENT_SFT RSFT ENT
+
+// Layer keys
+#define RAISE_DEL RAISE DEL // DEL on tap
+
+// Various French characters
 #define M_DOT LS(COMMA)
 
 &mt {
@@ -39,11 +53,6 @@
             timeout-ms = <50>;
             key-positions = <0 1>;
             bindings = <&kp ESC>;
-        };
-        combo_tvp {
-            timeout-ms = <100>;
-            key-positions = <11 12 13>;
-            bindings = <&tog ACTION>;
         };
     };
 
@@ -82,13 +91,13 @@
  */
 
         base_layer {
-            label = "BASE";
+            label = "AZERTY";
             bindings = <
 // +-----------+-----------+-----------+-----------+-----------+-----------+  +-----------+-----------+-----------+-----------+-----------+-----------+
                 &kp FR_A    &kp FR_Z    &kp E       &kp R       &kp T          &kp Y       &kp U       &kp I       &kp O       &kp P
                 &kp FR_Q    &kp S       &kp D       &kp F       &kp G          &kp H       &kp J       &kp K       &kp L       &kp M
-    &kp TAB     &kp FR_W    &kp X       &kp C       &kp V       &kp B          &kp N       &kp FR_COMM &kp M_DOT   &kp DOT     &kp FSLH    &kp RET
-                                        &kp ESC     &kp SPACE   &mo LOWER      &mo RAISE   &kp BSPC    &mo NAV
+    &mt TAB_MEH &kp FR_W    &kp X       &kp C       &kp V       &kp B          &kp N       &kp FR_COMM &kp M_DOT   &kp DOT     &kp FR_SCLN  &mt ENT_SFT
+                                        &kp ESC     &kp SPACE   &mo LOWER      &mt RAI_DEL &kp BSPC    &mo NAV
             >;
         };
 

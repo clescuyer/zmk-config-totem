@@ -30,6 +30,7 @@
 // LEFT HAND MEH / TAB
 #define MEH LS(LC(LALT))
 #define TAB_MEH LS(LC(LA)) TAB
+#define TAB_LS LSHIFT TAB
 
 // RIGHT HAND SHIFT / ENTER
 #define ENT_SFT RSHIFT ENTER
@@ -79,7 +80,7 @@
  * +-----------+-----------+-----------+-----------+-----------+-----------+  +-----------+-----------+-----------+-----------+-----------+-----------+
  * |   TAB     |     W     |     X     |     C     |     V     |     B     |  |     N     |     ,     |     .     |     ;     |     -     |   ENTER   |
  * +-----------+-----------+-----------+-----------+-----------+-----------+  +-----------+-----------+-----------+-----------+-----------+-----------+
- *                                     |    ESC    |   SPACE   |   LOWER   |  |   RAISE   |   BKSPC   |    NAV    |
+ *                                     |    ESC    |   SPACE   |   LOWER   |  |   RAISE   |   BKSPC   |    NAV    |n,.:,;
  *                                     +-----------+-----------+-----------+  +-----------+-----------+-----------+
  */
 
@@ -88,8 +89,8 @@
             bindings = <
 // +-----------+-----------+-----------+-----------+-----------+-----------+  +-----------+-----------+-----------+-----------+-----------+-----------+
                 &kp FR_A    &kp FR_Z    &kp E       &kp R       &kp T          &kp Y       &kp U       &kp I       &kp O       &kp P
-                &kp FR_Q    &kp S       &kp D       &kp F       &kp G          &kp H       &kp J       &kp K       &kp L       &kp M
-    &mt LSHIFT TAB &kp FR_W    &kp X       &kp C       &kp V       &kp B          &kp N       &kp FR_COMM &kp M_DOT   &kp DOT     &kp FR_SCLN  &kp ENTER
+                &kp FR_Q    &kp S       &kp D       &kp F       &kp G          &kp H       &kp J       &kp K       &kp L       &kp FR_M
+    &mt TAB_LSB &kp FR_W    &kp X       &kp C       &kp V       &kp B          &kp N       &kp FR_COMM &kp M_DOT   &kp FR_SCLN &kp FR_MINS  &mt ENT_SFT
                                         &kp ESC     &kp SPACE   &mo LOWER      &lt RAI_DEL &kp BSPC    &mo NAV
             >;
         };

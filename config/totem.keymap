@@ -28,7 +28,7 @@
  */
 
 // LEFT HAND MEH / TAB
-#define MEH LS(LC(LA))
+#define MEH LS(LC(LALT))
 #define TAB_MEH LS(LC(LA)) TAB
 
 // RIGHT HAND SHIFT / ENTER
@@ -48,6 +48,20 @@
 };
 
 / {
+
+    behaviors {
+        /omit-if-no-ref/ mtab: meh_tab {
+            bindings = <&kp>, <&kp>;
+            compatible = "zmk,behavior-hold-tap";
+            flavor = "balanced";
+            hold-trigger-key-positions = <KEYS_R THUMBS>;
+            hold-trigger-on-release;
+            tapping-term-ms = <TAPPING_TERM_MS>;
+            quick-tap-ms = <QUICK_TAP_MS>;
+            require-prior-idle-ms = <REQUIRE_PRIOR_IDLE_MS>;
+            #binding-cells = <2>;
+        };
+    }
 
     macros {
         gif: gif {
@@ -89,7 +103,7 @@
 // +-----------+-----------+-----------+-----------+-----------+-----------+  +-----------+-----------+-----------+-----------+-----------+-----------+
                 &kp FR_A    &kp FR_Z    &kp E       &kp R       &kp T          &kp Y       &kp U       &kp I       &kp O       &kp P
                 &kp FR_Q    &kp S       &kp D       &kp F       &kp G          &kp H       &kp J       &kp K       &kp L       &kp M
-    &mt MEH TAB &kp FR_W    &kp X       &kp C       &kp V       &kp B          &kp N       &kp FR_COMM &kp M_DOT   &kp DOT     &kp FR_SCLN  &mt RSHIFT ENTER
+    &mtab MEH TAB &kp FR_W    &kp X       &kp C       &kp V       &kp B          &kp N       &kp FR_COMM &kp M_DOT   &kp DOT     &kp FR_SCLN  &kp ENTER
                                         &kp ESC     &kp SPACE   &mo LOWER      &lt RAI_DEL &kp BSPC    &mo NAV
             >;
         };

@@ -28,6 +28,7 @@
  */
 
 // LEFT HAND MEH / TAB
+#define MEH LS(LC(LA))
 #define TAB_MEH LS(LC(LA)) TAB
 
 // RIGHT HAND SHIFT / ENTER
@@ -88,7 +89,7 @@
 // +-----------+-----------+-----------+-----------+-----------+-----------+  +-----------+-----------+-----------+-----------+-----------+-----------+
                 &kp FR_A    &kp FR_Z    &kp E       &kp R       &kp T          &kp Y       &kp U       &kp I       &kp O       &kp P
                 &kp FR_Q    &kp S       &kp D       &kp F       &kp G          &kp H       &kp J       &kp K       &kp L       &kp M
-    &mt TAB_MEH &kp FR_W    &kp X       &kp C       &kp V       &kp B          &kp N       &kp FR_COMM &kp M_DOT   &kp DOT     &kp FR_SCLN  &mt ENT_SFT
+    &mt MEH TAB &kp FR_W    &kp X       &kp C       &kp V       &kp B          &kp N       &kp FR_COMM &kp M_DOT   &kp DOT     &kp FR_SCLN  &mt RSHIFT ENTER
                                         &kp ESC     &kp SPACE   &mo LOWER      &lt RAI_DEL &kp BSPC    &mo NAV
             >;
         };

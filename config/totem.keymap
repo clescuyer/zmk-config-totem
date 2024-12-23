@@ -86,7 +86,7 @@
 //  +-----------+-----------+-----------+-----------+-----------+-----------+--  +-----------+-----------+-----------+-----------+-----------+-----------+
                  &kp A       &kp Z       &kp E       &kp R       &kp T            &kp Y       &kp U       &kp I       &kp O       &kp P
                  &kp Q       &kp S       &kp D       &kp F       &kp G            &kp H       &kp J       &kp K       &kp L       &kp M
-     &kp BLT_CLR     &kp W       &kp X       &kp C       &kp V       &kp B            &kp N       &kp M       &kp DOT     &kp DOT     &kp FSLH    &kp RET
+     &bt BT_CLR_ALL     &kp W       &kp X       &kp C       &kp V       &kp B            &kp N       &kp M       &kp DOT     &kp DOT     &kp FSLH    &kp RET
                                          &kp ESC     &kp SPACE   &kp SPACE        &kp RET     &kp BSPC    &kp RET
             >;
         };

@@ -36,7 +36,8 @@
 #define ENT_SFT RSHIFT ENTER
 
 // Layer keys
-#define RAI_DEL RAISE DEL // RAISE, DEL on tap
+#define RAISE_DEL RAISE DEL  // RAISE, Delete on tap
+#define ACT_ESC   ACTION ESC // ACTION, Escape on tap
 
 // Various French characters
 #define M_DOT LS(COMMA)
@@ -49,6 +50,53 @@
 };
 
 / {
+
+    behaviors {
+        /*
+        Home Row Mods
+
+        - tap: &kp <PARAM_2>
+        - hold: &kp <PARAM_1>
+
+        Example: &hrml LCMD T
+        */
+        /omit-if-no-ref/ hrml: hrm_left {
+            bindings = <&kp>, <&kp>;
+            compatible = "zmk,behavior-hold-tap";
+            flavor = "balanced";
+            hold-trigger-key-positions = <KEYS_R THUMBS>;
+            hold-trigger-on-release;
+            tapping-term-ms = <TAPPING_TERM_MS>;
+            quick-tap-ms = <QUICK_TAP_MS>;
+            require-prior-idle-ms = <REQUIRE_PRIOR_IDLE_MS>;
+            #binding-cells = <2>;
+        };
+        /omit-if-no-ref/ hrmr: hrm_right {
+            bindings = <&kp>, <&kp>;
+            compatible = "zmk,behavior-hold-tap";
+            flavor = "balanced";
+            hold-trigger-key-positions = <KEYS_L THUMBS>;
+            hold-trigger-on-release;
+            tapping-term-ms = <TAPPING_TERM_MS>;
+            quick-tap-ms = <QUICK_TAP_MS>;
+            require-prior-idle-ms = <REQUIRE_PRIOR_IDLE_MS>;
+            #binding-cells = <2>;
+        };
+
+        /*
+        - tap: sticky shift
+        - double-tap: caps-word (shift + tap mod-morph)
+        - hold: shift
+
+        From: https://github.com/urob/zmk-config/
+        */
+        /omit-if-no-ref/ smart_shift: smart_shift {
+            compatible = "zmk,behavior-mod-morph";
+            bindings = <&sk RSHFT>, <&caps_word>;
+            mods = <(MOD_RSFT)>;
+            #binding-cells = <0>;
+        };
+    }
 
     macros {
         gif: gif {
@@ -87,11 +135,11 @@
         base_layer {
             label = "AZERTY";
             bindings = <
-// +-----------+-----------+-----------+-----------+-----------+-----------+  +-----------+-----------+-----------+-----------+-----------+-----------+
-                &kp FR_A    &kp FR_Z    &kp E       &kp R       &kp T          &kp Y       &kp U       &kp I       &kp O       &kp P
-                &kp FR_Q    &kp S       &kp D       &kp F       &kp G          &kp H       &kp J       &kp K       &kp L       &kp FR_M
-    &mt TAB_LS  &kp FR_W    &kp X       &kp C       &kp V       &kp B          &kp N       &kp FR_COMM &kp M_DOT   &kp FR_SCLN &kp EQUAL   &mt ENT_SFT
-                                        &kp ESC     &kp SPACE   &mo LOWER      &lt RAI_DEL &kp BSPC    &mo NAV
+// +-------------+-------------+-------------+-------------+-------------+-------------+  +-------------+-------------+-------------+-------------+-------------+-------------+
+                  &kp FR_A      &kp FR_Z      &kp E         &kp R         &kp T            &kp Y         &kp U         &kp I         &kp O         &kp P
+                  &kp FR_Q      &hrml LCTRL S &hrml LALT D  &hrml LCMD F  &hrml LSHFT G    &hrmr RSHFT H &hrml RCMD J  &hrml RALT K  &hrml RCTRL L &kp FR_M
+    &mt TAB_LS    &kp FR_W      &kp X         &kp C         &kp V         &kp B            &kp N         &kp FR_COMM   &kp M_DOT     &kp FR_SCLN   &kp EQUAL     &mt ENT_SFT
+                                              &lt ACT_ESC   &kp SPACE     &mo LOWER        &lt RAISE_DEL &kp BSPC      &mo NAV
             >;
         };
 
@@ -100,7 +148,7 @@
         lower_layer {
             label= "LOWER";
             bindings = <
-// +-----------+-----------+-----------+-----------+-----------+-----------+  +-----------+-----------+-----------+-----------+-----------+-----------+
+// +-------------+-------------+-------------+-------------+-------------+-------------+  +-------------+-------------+-------------+-------------+-------------+-------------+
 
                 &kp ESC     &bt BT_CLR  &kp UP      &kp EQUAL   &kp LBRC        &kp RBRC    &kp KP_N7   &kp KP_N8   &kp KP_N9   &kp KP_PLUS
                 &kp LSHFT   &kp LEFT    &kp DOWN    &kp RIGHT   &kp LBKT        &kp RBKT    &kp KP_N4   &kp KP_N5   &kp KP_N6   &kp KP_MINUS
@@ -114,7 +162,7 @@
         raise_layer {
             label= "RAISE";
             bindings = <
-// +-----------+-----------+-----------+-----------+-----------+-----------+  +-----------+-----------+-----------+-----------+-----------+-----------+
+// +-------------+-------------+-------------+-------------+-------------+-------------+  +-------------+-------------+-------------+-------------+-------------+-------------+
 
                 &kp EXCL    &kp AT      &kp HASH    &kp DLLR    &kp PRCNT       &kp CARET   &kp AMPS    &kp RA(U)   &kp SQT     &kp DQT
                 &kp RA(A)   &trans      &kp RA(S)   &trans      &trans          &kp C_MUTE  &kp LS(RA(N4)) &kp RA(N5) &kp RA(N4)   &kp RA(O)
@@ -128,7 +176,7 @@
         nav_layer {
             label= "NAV";
             bindings = <
-// +-----------+-----------+-----------+-----------+-----------+-----------+  +-----------+-----------+-----------+-----------+-----------+-----------+
+// +-------------+-------------+-------------+-------------+-------------+-------------+  +-------------+-------------+-------------+-------------+-------------+-------------+
 
                 &sys_reset  &bt BT_CLR &out OUT_TOG &trans      &trans          &trans      &kp F7      &kp F8      &kp F9      &kp F12
                 &bootloader &bt BT_NXT  &trans      &trans      &trans          &trans      &kp F4      &kp F5      &kp F6      &kp F11
@@ -142,7 +190,7 @@
         action_layer {
             label= "ACTION";
             bindings = <
-// +-----------+-----------+-----------+-----------+-----------+-----------+  +-----------+-----------+-----------+-----------+-----------+-----------+
+// +-------------+-------------+-------------+-------------+-------------+-------------+  +-------------+-------------+-------------+-------------+-------------+-------------+
 
                 &kp TAB     &kp I       &kp LC(LALT) &kp O      &kp LC(F20)     &none       &none       &none       &none       &none
                 &kp TAB     &kp LEFT    &kp LALT    &kp RIGHT   &kp SPACE       &none       &none       &none       &none       &none

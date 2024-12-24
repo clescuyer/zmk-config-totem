@@ -106,7 +106,7 @@
             mods = <(MOD_RSFT)>;
             #binding-cells = <0>;
         };
-    }
+    };
 
     macros {
         gif: gif {

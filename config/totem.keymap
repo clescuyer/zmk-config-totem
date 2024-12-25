@@ -108,21 +108,21 @@
         comma_lt: comma_lessthan {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp GRAVE>, <&kp M>;
+            bindings = <&kp M>, <&kp GRAVE>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
         dot_mt: dot_morethan {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp LS(COMMA)>, <&kp LS(NON_US_BSLH)>;  // LSFT(KC_COMM), S(KC_NUBS)
+            bindings = <&kp LS(COMMA)>, <&kp DOT>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
         semi_colon: semicolon_colon {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp COMMA>, <&kp DOT>;  // KC_COMM, KC_DOT
+            bindings = <&kp COMMA>, <&kp DOT>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
     };

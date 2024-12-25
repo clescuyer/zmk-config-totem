@@ -103,7 +103,6 @@
             #binding-cells = <0>;
             bindings = <&sk RSHFT>, <&caps_word>;
             mods = <(MOD_RSFT)>;
-            #binding-cells = <0>;
         };
 
         comma_lt: comma_lessthan {

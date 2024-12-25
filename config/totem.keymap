@@ -92,7 +92,7 @@
             require-prior-idle-ms = <REQUIRE_PRIOR_IDLE_MS>;
         };
 
-        meh_tab: meh_tab {
+        meh_tab: meh_tabulation {
             compatible = "zmk,behavior-hold-tap";
             flavor = "balanced";
             #binding-cells = <0>;

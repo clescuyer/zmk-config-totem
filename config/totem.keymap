@@ -96,7 +96,7 @@
             compatible = "zmk,behavior-hold-tap";
             flavor = "balanced";
             #binding-cells = <0>;
-            bindings = <&kp TAB>, <&kp LS(LC(LA))>;
+            bindings = <&kp TAB>, <&kp MEH>;
         };
 
         /*

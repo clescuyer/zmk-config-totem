@@ -64,13 +64,11 @@
 
     behaviors {
         /*
-        Home Row Mods
-
-        - tap: &kp <PARAM_2>
-        - hold: &kp <PARAM_1>
-
-        Example: &hrml LCMD T
-        */
+         * Home Row Mods
+         * - tap: &kp <PARAM_2>
+         * - hold: &kp <PARAM_1>
+         * Example: &hrml LCMD T
+         */
         /omit-if-no-ref/ hrml: hrm_left {
             bindings = <&kp>, <&kp>;
             compatible = "zmk,behavior-hold-tap";
@@ -111,24 +109,11 @@
         comma_lt: comma_lessthan {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp LESS_THAN>, <&kp FR_COMM>;
+            bindings = <&kp GRAVE>, <&kp M>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
     };
 
-    macros {
-        gif: gif {
-            label = "giphy";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LSHFT>
-                , <&macro_tap &kp N2>
-                , <&macro_release &kp LSHFT>
-                , <&macro_tap &kp G &kp I &kp F>
-                ;
-        };
-    };
 
 // K E Y M A P
 // =============

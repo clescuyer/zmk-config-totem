@@ -70,26 +70,33 @@
          * Example: &hrml LCMD T
          */
         /omit-if-no-ref/ hrml: hrm_left {
-            bindings = <&kp>, <&kp>;
             compatible = "zmk,behavior-hold-tap";
             flavor = "balanced";
+            #binding-cells = <2>;
+            bindings = <&kp>, <&kp>;
             hold-trigger-key-positions = <KEYS_R THUMBS>;
             hold-trigger-on-release;
             tapping-term-ms = <TAPPING_TERM_MS>;
             quick-tap-ms = <QUICK_TAP_MS>;
             require-prior-idle-ms = <REQUIRE_PRIOR_IDLE_MS>;
-            #binding-cells = <2>;
         };
         /omit-if-no-ref/ hrmr: hrm_right {
-            bindings = <&kp>, <&kp>;
             compatible = "zmk,behavior-hold-tap";
             flavor = "balanced";
+            #binding-cells = <2>;
+            bindings = <&kp>, <&kp>;
             hold-trigger-key-positions = <KEYS_L THUMBS>;
             hold-trigger-on-release;
             tapping-term-ms = <TAPPING_TERM_MS>;
             quick-tap-ms = <QUICK_TAP_MS>;
             require-prior-idle-ms = <REQUIRE_PRIOR_IDLE_MS>;
-            #binding-cells = <2>;
+        };
+
+        meh_tab: meh_tab {
+            compatible = "zmk,behavior-hold-tap";
+            flavor = "balanced";
+            #binding-cells = <0>;
+            bindings = <&kp TAB>, <&kp LS(LC(LA))>;
         };
 
         /*
@@ -154,7 +161,7 @@
 // +-------------+-------------+-------------+-------------+-------------+-------------+  +-------------+-------------+-------------+-------------+-------------+-------------+
                   &kp FR_A      &kp FR_Z      &kp E         &kp R         &kp T            &kp Y         &kp U         &kp I         &kp O         &kp P
                   &kp FR_Q      &hrml LCTRL S &hrml LALT D  &hrml LCMD F  &hrml LSHFT G    &hrmr RSHFT H &hrml RCMD J  &hrml RALT K  &hrml RCTRL L &kp FR_M
-    &mt MEH_TAB   &kp FR_W      &kp X         &kp C         &kp V         &kp B            &kp N         &comma_lt     &dot_mt       &semi_colon   &kp EQUAL     &mt SHIFT_ENT
+    &meh_tab      &kp FR_W      &kp X         &kp C         &kp V         &kp B            &kp N         &comma_lt     &dot_mt       &semi_colon   &kp EQUAL     &mt SHIFT_ENT
                                               &lt ACT_ESC   &kp SPACE     &lt LOWER_ENTER  &lt RAISE_DEL &kp BSPC      &mo NAV
             >;
         };

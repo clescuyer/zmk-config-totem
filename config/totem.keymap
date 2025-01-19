@@ -178,9 +178,9 @@
             bindings = <
 // +-------------+-------------+-------------+-------------+-------------+-------------+  +-------------+-------------+-------------+-------------+-------------+-------------+
 
-                  &kp FR_BSLS   &kp FR_EXLM   &kp FR_AMPR   &kp FR_LCBR   &kp FR_RCBR      &kp FR_DQUO   &kp KP_N7     &kp KP_N8     &kp KP_N9     &kp LS(DOT)
+                  &kp FR_BSLS   &kp N8        &kp FR_AMPR   &kp FR_LCBR   &kp FR_RCBR      &kp FR_DQUO   &kp KP_N7     &kp KP_N8     &kp KP_N9     &kp LS(DOT)
                   &kp X         &kp FR_DLR    &kp X         &kp FR_LPRN   &kp FR_RPRN      &kp FR_QUOT   &kp KP_N4     &kp KP_N5     &kp KP_N6     &kp LS(RBKT)
-    &trans        &kp X         &kp X         &kp X         &kp FR_LBRC   &kp FR_RBRC      &kp KP_N0     &kp KP_N1     &kp KP_N2     &kp KP_N3     &kp LS(SLASH) &trans
+    &trans        &kp X         &kp X         &kp X         &kp FR_LBRC   &kp FR_RBRC      &kp KP_N0     &kp KP_N1     &kp KP_N2     &kp KP_N3     &kp LS(SLASH) &kp FR_EQL
                                               &trans        &trans        &trans           &trans        &trans        &trans
             >;
         };

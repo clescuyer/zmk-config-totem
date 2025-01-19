@@ -142,16 +142,16 @@
  * └────┴────┴────┴────────────────────────┴────┴────┴────┴────┘
  */
 // Row 1
-#define FR_TILD RA(FR_EACU) // ~ (dead)
-#define FR_HASH RA(FR_DQUO) // #
-#define FR_LCBR RA(FR_QUOT) // {
-#define FR_LBRC RA(FR_LPRN) // [
-#define FR_PIPE RA(FR_MINS) // |
-#define FR_GRV  RA(FR_EGRV) // ` (dead)
-#define FR_BSLS RA(FR_UNDS) // (backslash)
-#define FR_AT   RA(FR_AGRV) // @
-#define FR_RBRC RA(FR_RPRN) // ]
-#define FR_RCBR RA(FR_EQL)  // }
+#define FR_TILD RA(FR_EACU)      // ~ (dead)
+#define FR_HASH RA(FR_DQUO)      // #
+#define FR_LCBR RA(FR_QUOT)      // {
+#define FR_LBRC LS(RA(FR_QUOT))  // [
+#define FR_PIPE RA(FR_MINS)      // |
+#define FR_GRV  RA(FR_EGRV)      // ` (dead)
+#define FR_BSLS LS(RA(FR_COLN))  // (backslash)
+#define FR_AT   RA(FR_AGRV)      // @
+#define FR_RBRC LS(RA(FR_RPRN))  // ]
+#define FR_RCBR RA(FR_RPRN)      // }
 // Row 2
 #define FR_EURO RA(KC_E)   // €
 #define FR_CURR RA(FR_DLR) // ¤

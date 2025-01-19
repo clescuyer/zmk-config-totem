@@ -37,10 +37,7 @@
  * Define macros
  */
 
-// LEFT HAND MEH / TAB
-#define MEH LS(LC(LALT))
-#define MEH_TAB LS(LC(LA)) TAB
-#define TAB_LS LSHIFT TAB
+// LEFT HAND SHIFT / TAB
 #define LS_TAB LSHIFT TAB
 
 // RIGHT HAND SHIFT / ENTER
@@ -91,13 +88,6 @@
             tapping-term-ms = <TAPPING_TERM_MS>;
             quick-tap-ms = <QUICK_TAP_MS>;
             require-prior-idle-ms = <REQUIRE_PRIOR_IDLE_MS>;
-        };
-
-        meh_tab: meh_tabulation {
-            compatible = "zmk,behavior-hold-tap";
-            flavor = "balanced";
-            #binding-cells = <0>;
-            bindings = <&kp TAB &kp MEH>;
         };
 
         /*
@@ -176,7 +166,7 @@
 
                   &kp FR_A      &kp FR_Z      &kp E         &kp R         &kp T            &kp Y         &kp U         &kp I         &kp O         &kp P
                   &kp FR_Q      &hrml LCTRL S &hrml LALT D  &hrml LCMD F  &hrml LSHFT G    &hrmr RSHFT H &hrml RCMD J  &hrml RALT K  &hrml RCTRL L &kp FR_M
-    &mt TAB_LS    &kp FR_W      &kp X         &kp C         &kp V         &kp B            &kp N         &comma_lt     &dot_mt       &semi_colon   &kp EQUAL     &trans
+    &mt LS_TAB    &kp FR_W      &kp X         &kp C         &kp V         &kp B            &kp N         &comma_lt     &dot_mt       &semi_colon   &kp EQUAL     &trans
                                               &trans        &trans        &trans           &trans        &trans        &trans
             >;
         };

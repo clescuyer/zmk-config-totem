@@ -228,8 +228,8 @@
 // +-------------+-------------+-------------+-------------+-------------+-------------+  +-------------+-------------+-------------+-------------+-------------+-------------+
 
                   &kp FR_BSLS   &kp N8        &kp FR_AMPR   &kp FR_LCBR   &kp FR_RCBR      &kp FR_DQUO   &kp KP_N7     &kp KP_N8     &kp KP_N9     &kp LS(DOT)
-                  &not_equal    &kp FR_DLR    &dbl_arrow    &kp FR_LPRN   &kp FR_RPRN      &kp FR_QUOT   &kp KP_N4     &kp KP_N5     &kp KP_N6     &kp LS(RBKT)
-    &trans        &php_open     &php_close    &arrow        &kp FR_LBRC   &kp FR_RBRC      &kp KP_N0     &kp KP_N1     &kp KP_N2     &kp KP_N3     &kp LS(SLASH) &kp FR_EQL
+                  &not_equal    &kp FR_DLR    &dbl_arrow    &kp FR_LPRN   &kp FR_RPRN      &quote_bkq    &kp KP_N4     &kp KP_N5     &kp KP_N6     &kp LS(RBKT)
+    &kp LSHFT     &php_open     &php_close    &arrow        &kp FR_LBRC   &kp FR_RBRC      &kp KP_N0     &kp KP_N1     &kp KP_N2     &kp KP_N3     &kp LS(SLASH) &kp FR_EQL
                                               &trans        &trans        &trans           &trans        &trans        &trans
             >;
         };

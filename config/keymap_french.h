@@ -49,7 +49,7 @@
 #define FR_CCED N9    // ç
 #define FR_AGRV N0    // à
 #define FR_RPRN MINUS   // )
-#define FR_EQL  EQUAL   // =
+#define FR_EQL  SLASH   // = WRONG?
 // Row 2
 #define FR_A    Q    // A
 #define FR_Z    W    // Z
@@ -87,7 +87,7 @@
 #define FR_COMM M    // ,
 #define FR_SCLN COMMA // ;
 #define FR_COLN DOT   // :
-#define FR_EXLM SLASH  // !
+#define FR_EXLM SLASH  // ! WRONG?
 
 /* Shifted symbols
  * ┌───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───────┐

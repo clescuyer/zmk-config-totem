@@ -144,8 +144,8 @@
 // Row 1
 #define FR_TILD RA(FR_EACU)      // ~ (dead)
 #define FR_HASH RA(FR_DQUO)      // #
-#define FR_LCBR RA(FR_QUOT)      // {
-#define FR_LBRC LS(RA(FR_QUOT))  // [
+#define FR_LCBR RA(FR_LPRN)      // {
+#define FR_LBRC LS(RA(FR_LPRN))  // [
 #define FR_PIPE RA(FR_MINS)      // |
 #define FR_GRV  RA(FR_EGRV)      // ` (dead)
 #define FR_BSLS LS(RA(FR_COLN))  // (backslash)

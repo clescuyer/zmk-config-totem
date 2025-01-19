@@ -125,12 +125,13 @@
         };
     };
 
-
     macros {
         not_equal: not_equal {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
             wait-ms = <40>;
             tap-ms = <40>;
-            bindings = <&kp N8 &kp M>;
+            bindings = <&kp N8 &kp SLASH>;
         };
     };
 

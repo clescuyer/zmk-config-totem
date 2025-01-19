@@ -38,29 +38,29 @@
  */
 // Row 1
 #define FR_SUP2 GRAVE   // ²
-#define FR_AMPR N1    // &
-#define FR_EACU N2    // é
-#define FR_DQUO N3    // "
-#define FR_QUOT N4    // '
-#define FR_LPRN N5    // (
-#define FR_MINS N6    // -
-#define FR_EGRV N7    // è
-#define FR_UNDS N8    // _
-#define FR_CCED N9    // ç
-#define FR_AGRV N0    // à
+#define FR_AMPR N1      // &
+#define FR_EACU N2      // é
+#define FR_DQUO N3      // "
+#define FR_QUOT N4      // '
+#define FR_LPRN N5      // (
+#define FR_MINS N6      // -
+#define FR_EGRV N7      // è
+#define FR_UNDS N8      // _
+#define FR_CCED N9      // ç
+#define FR_AGRV N0      // à
 #define FR_RPRN MINUS   // )
-#define FR_EQL  SLASH   // = WRONG?
+#define FR_EQL  SLASH   // =
 // Row 2
-#define FR_A    Q    // A
-#define FR_Z    W    // Z
-#define FR_E    E    // E
-#define FR_R    R    // R
-#define FR_T    T    // T
-#define FR_Y    Y    // Y
-#define FR_U    U    // U
-#define FR_I    I    // I
-#define FR_O    O    // O
-#define FR_P    P    // P
+#define FR_A    Q     // A
+#define FR_Z    W     // Z
+#define FR_E    E     // E
+#define FR_R    R     // R
+#define FR_T    T     // T
+#define FR_Y    Y     // Y
+#define FR_U    U     // U
+#define FR_I    I     // I
+#define FR_O    O     // O
+#define FR_P    P     // P
 #define FR_CIRC LBKT  // ^ (dead)
 #define FR_DLR  RBKT  // $
 // Row 3
@@ -77,16 +77,16 @@
 #define FR_UGRV SQT  // ù
 #define FR_ASTR STAR // *
 // Row 4
-#define FR_LABK STAR // <
-#define FR_W    Z    // W
-#define FR_X    X    // X
-#define FR_C    C    // C
-#define FR_V    V    // V
-#define FR_B    B    // B
-#define FR_N    N    // N
-#define FR_COMM M    // ,
-#define FR_SCLN COMMA // ;
-#define FR_COLN DOT   // :
+#define FR_LABK STAR   // <
+#define FR_W    Z      // W
+#define FR_X    X      // X
+#define FR_C    C      // C
+#define FR_V    V      // V
+#define FR_B    B      // B
+#define FR_N    N      // N
+#define FR_COMM M      // ,
+#define FR_SCLN COMMA  // ;
+#define FR_COLN DOT    // :
 #define FR_EXLM SLASH  // ! WRONG?
 
 /* Shifted symbols

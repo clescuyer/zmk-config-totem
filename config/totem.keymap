@@ -130,11 +130,9 @@
         not_equal: not_equal {
             wait-ms = <40>;
             tap-ms = <40>;
-            bindings
-            = <&kp N8 &kp M>
-            ;
-        }
-    }
+            bindings = <&kp N8 &kp M>;
+        };
+    };
 
 
 // K E Y M A P
